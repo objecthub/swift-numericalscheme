@@ -3,14 +3,15 @@
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg?style=flat)](https://developer.apple.com/osx/)
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg?style=flat)](https://www.ubuntu.com/)
 [![Language: Swift 5.1](https://img.shields.io/badge/Language-Swift%205.1-green.svg?style=flat)](https://developer.apple.com/swift/)
-[![IDE: Xcode 11.2](https://img.shields.io/badge/IDE-Xcode%2011.0-orange.svg?style=flat)](https://developer.apple.com/xcode/)
+[![IDE: Xcode 11.2](https://img.shields.io/badge/IDE-Xcode%2011.2-orange.svg?style=flat)](https://developer.apple.com/xcode/)
 [![Carthage: compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License: Apache 2.0](https://img.shields.io/badge/License-BSD-lightgrey.svg?style=flat)](https://developers.google.com/open-source/licenses/bsd)
 
 This Xcode project showcases how to extend [Swift LispKit](https://github.com/objecthub/swift-lispkit).
 The project implements a read-eval-print loop for an extended LispKit language supporting native
-flonum vectors and arrays. The flonum vectors are implemented in terms of a new native LispKit library,
-the flonum array library is implemented in Scheme and uses the flonum vector library.
+flonum vectors and arrays. The flonum vectors are implemented in terms of a new native LispKit library
+[`(numerical vector)`](https://github.com/objecthub/swift-numericalscheme/blob/master/Sources/NumericalScheme/VectorLibrary.swift), the flonum array library is implemented as a regular Scheme library
+[`(numerical array)`](https://github.com/objecthub/swift-numericalscheme/blob/master/Sources/NumericalScheme/Resources/Libraries/numerical/array.sld) and uses the flonum vector library in its implementation.
 
 ## Building the tool
 
@@ -56,7 +57,7 @@ After starting up the tool, enter the following command in the read-eval-print l
 (load "Examples/Matrix")
 ```
 
-If this results in the output below, everything is set up correctly:
+This will load and execute the test program [Matrix.scm](https://github.com/objecthub/swift-numericalscheme/blob/master/Sources/NumericalScheme/Resources/Examples/Matrix.scm). If executing the command will results in the output below, everything is set up correctly:
 
 ```
 #f64array:(#<f64vector: 1.0 6.0 11.0 2.0 7.0 12.0 3.0 8.0 13.0 4.0 9.0 14.0 5.0 10.0 15.0> 3 5)
