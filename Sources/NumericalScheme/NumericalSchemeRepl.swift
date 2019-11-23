@@ -36,7 +36,7 @@ public final class NumericalSchemeRepl: LispKitRepl {
         _ = self.context?.fileHandler.prependSearchPath(internalUrl.path)
       }
     }
-    return super.setupRootPaths()
+    return super.setupRootPaths(includeInternalResources: includeInternalResources)
   }
 
 }

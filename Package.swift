@@ -2,19 +2,13 @@
 //
 //  Package.swift
 //  NumericalScheme
-//
-//  Build targets by calling the Swift Package Manager in the following way for debug purposes:
-//  swift build -Xswiftc "-D" -Xswiftc "SPM"
-//
-//  Run REPL:
-//  swift run -Xswiftc "-D" -Xswiftc "SPM"
-//
+//  
 //  A release can be built with these options:
 //  swift build -c release -Xswiftc "-D" -Xswiftc "SPM"
 //
-//  This creates a release binary in .build/release/. Assumung that a LispKit directory is
-//  located in ~/Documents/LispKit, the binary can be invoked like this:
-//  .build/release/NumericalScheme -d LispKit
+//  This creates a release binary in .build/release/ which can be invoked like this:
+//  .build/release/NumericalScheme -r .build/checkouts/swift-lispkit/Sources/LispKit/Resources
+//  Sources/NumericalScheme/Resources
 //
 //
 //  Created by Matthias Zenger on 22/11/2019.
@@ -44,8 +38,7 @@ let package = Package(
     .executable(name: "NumericalScheme", targets: ["NumericalScheme"])
   ],
   dependencies: [
-    .package(url: "https://github.com/objecthub/swift-lispkit.git",
-             .upToNextMajor(from: "1.8.2"))
+    .package(url: "https://github.com/objecthub/swift-lispkit.git", from: "1.8.3")
   ],
   targets: [
     .target(name: "NumericalScheme",

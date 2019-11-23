@@ -60,6 +60,8 @@
 		CC498A8F23888F36002734E0 /* VectorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorLibrary.swift; sourceTree = "<group>"; };
 		CC498A912388B0CC002734E0 /* array.sld */ = {isa = PBXFileReference; lastKnownFileType = text; path = array.sld; sourceTree = "<group>"; };
 		CC498A942388B3F0002734E0 /* NumericalSchemeRepl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericalSchemeRepl.swift; sourceTree = "<group>"; };
+		CC498A962388C96B002734E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CC498A972388C974002734E0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CC5A0A3B23880BC1006EA2CE /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		CC5A0A3D23880CA1006EA2CE /* LispKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LispKit.framework; path = Carthage/Build/Mac/LispKit.framework; sourceTree = "<group>"; };
 		CC5A0A4123880CA4006EA2CE /* LispKitTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LispKitTools.framework; path = Carthage/Build/Mac/LispKitTools.framework; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		CCA7DC5523880B3C00785FBE = {
 			isa = PBXGroup;
 			children = (
+				CC498A962388C96B002734E0 /* README.md */,
+				CC498A972388C974002734E0 /* LICENSE */,
 				CC5A0A4A23880ED0006EA2CE /* LispKitTools.framework.dSYM */,
 				CC5A0A4823880ECB006EA2CE /* LispKit.framework.dSYM */,
 				CC5A0A3B23880BC1006EA2CE /* Cartfile */,

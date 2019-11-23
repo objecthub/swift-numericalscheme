@@ -36,7 +36,8 @@ Context.simplifiedDescriptions = true
 LibraryRegistry.register(VectorLibrary.self)
 
 // Creation of LispKit read-eval-print loop.
-let repl = LispKitRepl(name: name, version: version, build: "", copyright: copyright, prompt: "> ")
+let repl = NumericalSchemeRepl(name: name, version: version, build: "",
+                               copyright: copyright, prompt: "> ")
 
 // Parse and check command line arguments.
 guard repl.flagsValid() else {
