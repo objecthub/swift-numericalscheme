@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CC498A9023888F36002734E0 /* VectorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498A8F23888F36002734E0 /* VectorLibrary.swift */; };
-		CC498A932388B221002734E0 /* array.sld in CopyFiles */ = {isa = PBXBuildFile; fileRef = CC498A912388B0CC002734E0 /* array.sld */; };
+		CC498A932388B221002734E0 /* array.sld in Copy libraries */ = {isa = PBXBuildFile; fileRef = CC498A912388B0CC002734E0 /* array.sld */; };
 		CC498A952388B3F0002734E0 /* NumericalSchemeRepl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498A942388B3F0002734E0 /* NumericalSchemeRepl.swift */; };
+		CC498A9B2389365E002734E0 /* Matrix.scm in Copy examples */ = {isa = PBXBuildFile; fileRef = CC498A99238935B6002734E0 /* Matrix.scm */; };
 		CC5A0A3E23880CA1006EA2CE /* LispKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5A0A3D23880CA1006EA2CE /* LispKit.framework */; };
 		CC5A0A3F23880CA1006EA2CE /* LispKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC5A0A3D23880CA1006EA2CE /* LispKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC5A0A4223880CA4006EA2CE /* LispKitTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5A0A4123880CA4006EA2CE /* LispKitTools.framework */; };
@@ -20,14 +21,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CC498A922388B1CF002734E0 /* CopyFiles */ = {
+		CC498A922388B1CF002734E0 /* Copy libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Resources/Libraries/numerical;
 			dstSubfolderSpec = 7;
 			files = (
-				CC498A932388B221002734E0 /* array.sld in CopyFiles */,
+				CC498A932388B221002734E0 /* array.sld in Copy libraries */,
 			);
+			name = "Copy libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC498A9A23893647002734E0 /* Copy examples */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Resources/Examples;
+			dstSubfolderSpec = 7;
+			files = (
+				CC498A9B2389365E002734E0 /* Matrix.scm in Copy examples */,
+			);
+			name = "Copy examples";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CC5A0A4023880CA1006EA2CE /* Embed Frameworks */ = {
@@ -62,6 +75,7 @@
 		CC498A942388B3F0002734E0 /* NumericalSchemeRepl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericalSchemeRepl.swift; sourceTree = "<group>"; };
 		CC498A962388C96B002734E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CC498A972388C974002734E0 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CC498A99238935B6002734E0 /* Matrix.scm */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matrix.scm; sourceTree = "<group>"; };
 		CC5A0A3B23880BC1006EA2CE /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		CC5A0A3D23880CA1006EA2CE /* LispKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LispKit.framework; path = Carthage/Build/Mac/LispKit.framework; sourceTree = "<group>"; };
 		CC5A0A4123880CA4006EA2CE /* LispKitTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LispKitTools.framework; path = Carthage/Build/Mac/LispKitTools.framework; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 		CC498A8C238886A3002734E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC498A9823893055002734E0 /* Examples */,
 				CC498A8D238886B8002734E0 /* Libraries */,
 			);
 			path = Resources;
@@ -107,6 +122,14 @@
 				CC498A912388B0CC002734E0 /* array.sld */,
 			);
 			path = numerical;
+			sourceTree = "<group>";
+		};
+		CC498A9823893055002734E0 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				CC498A99238935B6002734E0 /* Matrix.scm */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		CC5A0A3C23880CA1006EA2CE /* Frameworks */ = {
@@ -164,7 +187,8 @@
 				CCA7DC5B23880B3C00785FBE /* Frameworks */,
 				CC5A0A4023880CA1006EA2CE /* Embed Frameworks */,
 				CCA7DC5C23880B3C00785FBE /* Copy dsym files */,
-				CC498A922388B1CF002734E0 /* CopyFiles */,
+				CC498A922388B1CF002734E0 /* Copy libraries */,
+				CC498A9A23893647002734E0 /* Copy examples */,
 			);
 			buildRules = (
 			);

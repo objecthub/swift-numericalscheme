@@ -20,7 +20,8 @@
   (export make-f64array
           f64array?
           f64array-ref
-          f64array-set!)
+          f64array-set!
+          f64array-dimensions)
 
   (import (lispkit base)
           (numerical vector))
@@ -45,5 +46,9 @@
     (define (f64array-set! a val . indx)
       (let ((v (f64array-unwrap a)))
         (f64vector-set! (car v) (index (cdr v) indx) val)))
+
+    (define (f64array-dimensions a)
+      (let ((v (f64array-unwrap a)))
+        (cdr v)))
   )
 )
