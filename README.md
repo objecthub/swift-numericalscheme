@@ -3,7 +3,7 @@
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg?style=flat)](https://developer.apple.com/osx/)
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg?style=flat)](https://www.ubuntu.com/)
 [![Language: Swift 5.1](https://img.shields.io/badge/Language-Swift%205.1-green.svg?style=flat)](https://developer.apple.com/swift/)
-[![IDE: Xcode 11.3](https://img.shields.io/badge/IDE-Xcode%2011.3-orange.svg?style=flat)](https://developer.apple.com/xcode/)
+[![IDE: Xcode 11.4](https://img.shields.io/badge/IDE-Xcode%2011.3-orange.svg?style=flat)](https://developer.apple.com/xcode/)
 [![Carthage: compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License: Apache 2.0](https://img.shields.io/badge/License-BSD-lightgrey.svg?style=flat)](https://developers.google.com/open-source/licenses/bsd)
 
@@ -69,6 +69,6 @@ The following technologies and components are needed to build the _NumericalSche
 tool:
 
 - [Swift 5.1](https://developer.apple.com/swift/)
-- [Xcode 11.3](https://developer.apple.com/xcode/)
+- [Xcode 11.4](https://developer.apple.com/xcode/)
 - [Swift Package Manager](https://swift.org/package-manager/)
 - [LispKit](http://github.com/objecthub/swift-lispkit)
