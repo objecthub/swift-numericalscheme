@@ -23,7 +23,7 @@ import LispKit
 
 let name = "NumericalScheme"
 let version = "1.0"
-let copyright = "Copyright © 2019-2020 Matthias Zenger"
+let copyright = "Copyright © 2019-2021 Matthias Zenger"
 let features = ["repl", "numerical-scheme"]
 #if SPM
 let internalResources = false

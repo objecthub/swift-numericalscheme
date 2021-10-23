@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.4
 //
 //  Package.swift
 //  NumericalScheme
@@ -38,12 +38,13 @@ let package = Package(
     .executable(name: "NumericalScheme", targets: ["NumericalScheme"])
   ],
   dependencies: [
-    .package(url: "https://github.com/objecthub/swift-lispkit.git", from: "1.8.3")
+    .package(url: "https://github.com/objecthub/swift-lispkit.git", .branch("master"))
   ],
   targets: [
-    .target(name: "NumericalScheme",
-            dependencies: ["LispKit", "LispKitTools"],
-            exclude: []),
+    .executableTarget(name: "NumericalScheme",
+                      dependencies: [.product(name: "LispKit", package: "swift-lispkit"),
+                                     .product(name: "LispKitTools", package: "swift-lispkit")],
+                      exclude: ["Resources"]),
   ],
   swiftLanguageVersions: [.v5]
 )
