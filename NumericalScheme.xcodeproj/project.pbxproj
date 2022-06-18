@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		CC5A0A4923880ECB006EA2CE /* LispKit.framework.dSYM in Copy dsym files */ = {isa = PBXBuildFile; fileRef = CC5A0A4823880ECB006EA2CE /* LispKit.framework.dSYM */; };
 		CC5A0A4B23880ED0006EA2CE /* LispKitTools.framework.dSYM in Copy dsym files */ = {isa = PBXBuildFile; fileRef = CC5A0A4A23880ED0006EA2CE /* LispKitTools.framework.dSYM */; };
 		CCA7DC6223880B3C00785FBE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA7DC6123880B3C00785FBE /* main.swift */; };
+		CCBF71E1285E5320001E06F9 /* Atomics in Frameworks */ = {isa = PBXBuildFile; productRef = CCBF71E0285E5320001E06F9 /* Atomics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBF71E1285E5320001E06F9 /* Atomics in Frameworks */,
 				CC5A0A3E23880CA1006EA2CE /* LispKit.framework in Frameworks */,
 				CC5A0A4223880CA4006EA2CE /* LispKitTools.framework in Frameworks */,
 			);
@@ -195,6 +197,9 @@
 			dependencies = (
 			);
 			name = NumericalScheme;
+			packageProductDependencies = (
+				CCBF71E0285E5320001E06F9 /* Atomics */,
+			);
 			productName = NumericalScheme;
 			productReference = CCA7DC5E23880B3C00785FBE /* NumericalScheme */;
 			productType = "com.apple.product-type.tool";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = CCA7DC5523880B3C00785FBE;
+			packageReferences = (
+				CCBF71DF285E5320001E06F9 /* XCRemoteSwiftPackageReference "swift-atomics" */,
+			);
 			productRefGroup = CCA7DC5F23880B3C00785FBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCBF71DF285E5320001E06F9 /* XCRemoteSwiftPackageReference "swift-atomics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-atomics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCBF71E0285E5320001E06F9 /* Atomics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCBF71DF285E5320001E06F9 /* XCRemoteSwiftPackageReference "swift-atomics" */;
+			productName = Atomics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CCA7DC5623880B3C00785FBE /* Project object */;
 }
