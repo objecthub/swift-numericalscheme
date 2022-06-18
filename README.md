@@ -1,7 +1,7 @@
 # Swift NumericalScheme
 
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg?style=flat)](https://developer.apple.com/osx/)
-[![Language: Swift 5](https://img.shields.io/badge/Language-Swift%205-green.svg?style=flat)](https://developer.apple.com/swift/)
+[![Language: Swift 5.6](https://img.shields.io/badge/Language-Swift%205.6-green.svg?style=flat)](https://developer.apple.com/swift/)
 [![IDE: Xcode 13](https://img.shields.io/badge/IDE-Xcode%2013-orange.svg?style=flat)](https://developer.apple.com/xcode/)
 [![Carthage: compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License: Apache 2.0](https://img.shields.io/badge/License-BSD-lightgrey.svg?style=flat)](https://developers.google.com/open-source/licenses/bsd)
@@ -67,7 +67,7 @@ This will load and execute the test program [Matrix.scm](https://github.com/obje
 The following technologies and components are needed to build the _NumericalScheme_ command-line
 tool:
 
-- [Swift 5](https://developer.apple.com/swift/)
+- [Swift 5.6](https://developer.apple.com/swift/)
 - [Xcode 13](https://developer.apple.com/xcode/)
 - [Swift Package Manager](https://swift.org/package-manager/)
 - [LispKit](http://github.com/objecthub/swift-lispkit)
