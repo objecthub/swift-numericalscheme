@@ -21,15 +21,20 @@
           f64array?
           f64array-ref
           f64array-set!
-          f64array-dimensions)
+          f64array-dimensions
+          f64array-type-tag)
 
   (import (lispkit base)
           (numerical vector))
 
   (begin
 
-    (define-values (new-f64array f64array? f64array-unwrap make-f64array-subtype)
-                   (make-type 'f64array))
+    (define-values (f64array-type-tag
+                    new-f64array
+                    f64array?
+                    f64array-unwrap
+                    make-f64array-subtype)
+      (make-type 'f64array))
 
     (define (make-f64array . dims)
       (new-f64array (cons (make-f64vector (apply * dims)) dims)))

@@ -1,8 +1,8 @@
 # Swift NumericalScheme
 
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg?style=flat)](https://developer.apple.com/osx/)
-[![Language: Swift 5.6](https://img.shields.io/badge/Language-Swift%205.6-green.svg?style=flat)](https://developer.apple.com/swift/)
-[![IDE: Xcode 13](https://img.shields.io/badge/IDE-Xcode%2013-orange.svg?style=flat)](https://developer.apple.com/xcode/)
+[![Language: Swift 5.7](https://img.shields.io/badge/Language-Swift%205.6-green.svg?style=flat)](https://developer.apple.com/swift/)
+[![IDE: Xcode 14](https://img.shields.io/badge/IDE-Xcode%2014-orange.svg?style=flat)](https://developer.apple.com/xcode/)
 [![Carthage: compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License: Apache 2.0](https://img.shields.io/badge/License-BSD-lightgrey.svg?style=flat)](https://developers.google.com/open-source/licenses/bsd)
 
@@ -71,3 +71,4 @@ tool:
 - [Xcode 13](https://developer.apple.com/xcode/)
 - [Swift Package Manager](https://swift.org/package-manager/)
 - [LispKit](http://github.com/objecthub/swift-lispkit)
+- [Swift Atomics](https://github.com/apple/swift-atomics)
