@@ -23,20 +23,16 @@ import LispKit
 
 let name = "NumericalScheme"
 let version = "1.0"
-let copyright = "Copyright © 2019-2022 Matthias Zenger"
-let features = ["repl", "numerical-scheme"]
-#if SPM
-let internalResources = false
-#else
-let internalResources = true
-#endif
+let copyright = "Copyright © 2019-2024 Matthias Zenger"
 
 // Static configuration of the the LispKit framework.
 Context.simplifiedDescriptions = true
 LibraryRegistry.register(VectorLibrary.self)
 
 // Creation of LispKit read-eval-print loop.
-let repl = NumericalSchemeRepl(name: name, version: version, build: "",
+let repl = NumericalSchemeRepl(name: name,
+                               version: version,
+                               build: "",
                                copyright: copyright, prompt: "> ")
 
 // Parse and check command line arguments.
@@ -46,15 +42,37 @@ guard repl.flagsValid() else {
 
 // Invoke read-eval-print loop if requested.
 if repl.shouldRunRepl() {
-  guard repl.configurationSuccessfull(implementationName: name,
-                                      implementationVersion: version,
-                                      includeInternalResources: internalResources,
-                                      defaultDocDirectory: "NumericalScheme",
-                                      features: features),
-        repl.run() else {
-    exit(1)
+  var features = ["repl", "numerical-scheme"]
+  if repl.runloop.wasSet {
+    features.append("runloop")
+  }
+  if LispKitContext.bundle == nil {
+    guard repl.configurationSuccessfull(implementationName: name,
+                                        implementationVersion: version,
+                                        includeInternalResources: false,
+                                        defaultDocDirectory: "NumericalScheme",
+                                        features: features) else {
+      exit(1)
+    }
+  } else {
+    guard repl.configurationSuccessfull(features: features) else {
+      exit(1)
+    }
+  }
+  if repl.runloop.wasSet {
+    repl.toolMessage = "[enabled run loop]"
+    let main = Thread {
+      let succeeded = repl.run()
+      repl.release()
+      exit(succeeded ? 0 : 1)
+    }
+    main.stackSize = (repl.systemStackSize.value ?? (12 * 1024)) * 1024
+    main.qualityOfService = .userInitiated
+    main.start()
+    RunLoop.current.run()
+  } else {
+    let succeeded = repl.run()
+    repl.release()
+    exit(succeeded ? 0 : 1)
   }
 }
-
-// Regular exit of read-eval-print loop
-exit(0)

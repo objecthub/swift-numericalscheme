@@ -1,4 +1,4 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.7
 //
 //  Package.swift
 //  NumericalScheme
@@ -32,13 +32,13 @@ import PackageDescription
 let package = Package(
   name: "NumericalScheme",
   platforms: [
-    .macOS(.v11)
+    .macOS(.v13)
   ],
   products: [
     .executable(name: "NumericalScheme", targets: ["NumericalScheme"])
   ],
   dependencies: [
-    .package(url: "https://github.com/objecthub/swift-lispkit.git", .branch("master"))
+    .package(url: "https://github.com/objecthub/swift-lispkit.git", branch: "master")
   ],
   targets: [
     .executableTarget(name: "NumericalScheme",

@@ -32,7 +32,7 @@ preferred approach.
 ```
 git clone https://github.com/objecthub/swift-numericalscheme
 cd swift-numericalscheme
-swift build -c release -Xswiftc "-D" -Xswiftc "SPM"
+swift build -c release
 ```
 
 This will statically link all libraries into one binary `.build/release/NumericalScheme`. For executing the
@@ -45,7 +45,7 @@ This is how the _NumericalScheme_ command-line tool can be invoked (assuming the
 root directoy `swift-numericalscheme`):
 
 ```
-.build/release/NumericalScheme -r .build/checkouts/swift-lispkit/Sources/LispKit/Resources Sources/NumericalScheme/Resources
+.build/release/NumericalScheme -x -r .build/checkouts/swift-lispkit/Sources/LispKit/Resources Sources/NumericalScheme/Resources
 ```
 
 ## Testing the tool
