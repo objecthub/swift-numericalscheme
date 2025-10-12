@@ -23,7 +23,7 @@ import LispKit
 
 let name = "NumericalScheme"
 let version = "1.0"
-let copyright = "Copyright © 2019-2024 Matthias Zenger"
+let copyright = "Copyright © 2019-2025 Matthias Zenger"
 
 // Static configuration of the the LispKit framework.
 Context.simplifiedDescriptions = true
