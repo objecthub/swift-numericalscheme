@@ -32,7 +32,7 @@ import PackageDescription
 let package = Package(
   name: "NumericalScheme",
   platforms: [
-    .macOS(.v13)
+    .macOS("13.4")
   ],
   products: [
     .executable(name: "NumericalScheme", targets: ["NumericalScheme"])
